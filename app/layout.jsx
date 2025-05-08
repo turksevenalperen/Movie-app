@@ -1,7 +1,8 @@
-import "./globals.css"
-import Header from "@/components/Header"
-import Provider from "@/components/Provider"
-import { Tabs } from "@/components/ui/tabs"
+import "./globals.css";
+import Header from "@/components/Header";
+import Provider from "@/components/Provider";
+import Tabss from "@/components/Tabs";
+import { Suspense } from "react";
 
 export const metadata = {
   title: {
@@ -9,8 +10,8 @@ export const metadata = {
     default: "MovieApp - Discover Movies",
   },
   description: "Discover the latest and greatest movies with MovieApp",
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -18,15 +19,12 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen bg-background text-foreground">
         <Provider>
           <Header />
-          <Tabs />
+          <Suspense fallback={<div>Yükleniyor...</div>}>
+            <Tabss />
+          </Suspense>
           <main>{children}</main>
         </Provider>
       </body>
     </html>
-  )
+  );
 }
-
-
-
-
-

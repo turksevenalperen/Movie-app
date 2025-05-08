@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { cn } from "@/lib/utils"
 
-export default function Tabs() {
+export default function Tabss() {
   const searchParams = useSearchParams()
   const genre = searchParams.get("genre")
 
