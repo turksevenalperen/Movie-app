@@ -11,6 +11,7 @@ export default async function Home({ searchParams }) {
         {movies?.map((movie) => (
           <Movies key={movie.id} movie={movie} />
         ))}
+        
       </div>
     </main>
   )
