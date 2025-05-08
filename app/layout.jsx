@@ -1,7 +1,7 @@
 import "./globals.css"
 import Header from "@/components/Header"
 import Provider from "@/components/Provider"
-import Tabs from "@/components/Tabs"
+import { Tabs } from "@/components/ui/tabs"
 
 export const metadata = {
   title: {
@@ -28,4 +28,5 @@ export default function RootLayout({ children }) {
 
 
 
-import './globals.css'
+
+

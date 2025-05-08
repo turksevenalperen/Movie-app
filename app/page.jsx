@@ -2,6 +2,7 @@ import Movies from "@/components/Movies"
 import { getMovies } from "@/lib/api"
 
 export default async function Home({ searchParams }) {
+ 
   const movies = await getMovies(searchParams.genre)
 
   return (
